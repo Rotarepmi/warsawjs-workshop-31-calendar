@@ -7,15 +7,12 @@ import { IoC } from './IoC/IoC';
 import { Main } from './Main';
 
 
-(async () =>
-{
-    try
-    {
+(async () => {
+    try {
         const main: Main = IoC.get(Main);
         await main.Start();
     }
-    catch (ex)
-    {
+    catch (ex) {
         console.log('Startup exception:', ex);
     }
 })();
